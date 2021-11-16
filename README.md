@@ -32,3 +32,5 @@
 └── package-lock.json
 ```
 
+### Wiki
+[いもきゃんお作法Books](https://github.com/naberina/MannerBooks/wiki/%F0%9F%93%9A-%E3%81%84%E3%82%82%E3%82%AD%E3%83%A3%E3%83%B3%E3%81%8A%E4%BD%9C%E6%B3%95%E6%9C%AC)
