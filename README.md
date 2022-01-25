@@ -20,12 +20,13 @@
 ├── articles
 ├── books
 │   └── imoni-manner-book // いもキャン御作法本
-│        ├──1.imoni-manner-book.md //チャプター毎の記事
-│        ├──2.imoni-manner-book.md
-│        ├──3.imoni-manner-book.md
-│        ├──4.imoni-manner-book.md
-│        ├──n.imoni-manner-book.md
-│        └──10.imoni-manner-book.md
+│        ├──1-1_imoni-manner-book.md //チャプター毎の記事
+│        ├──2-1_imoni-manner-book.md
+│        ├──2-2_imoni-manner-book.md
+│        ├──2-3_imoni-manner-book.md
+│        ├──3-1.imoni-manner-book.md
+│        ├──3-2.imoni-manner-book.md
+│        └──n.imoni-manner-book.md
 ├── README.md
 ├── .gitignore
 ├── package.json
