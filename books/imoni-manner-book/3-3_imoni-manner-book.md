@@ -1,19 +1,20 @@
 ---
-title: "変数"
+title: "🔰 変数"
 ---
 ## 変数とは？
 プログラミングには、文字列や数値データに名前をつけて、
 値を繰り返し利用できるようにする**変数**という機能があります。
 
-![](https://storage.googleapis.com/zenn-user-upload/da7dbed88e8299849a5dab09.png)
-
+![](https://storage.googleapis.com/zenn-user-upload/da7dbed88e8299849a5dab09.png =400x)
 
 変数を定義するには、 `const` `let` `var`といったキーワードを利用して変数を定義します。
+
 ```javascript:OK例
 const 変数名 = 初期値;
 let 変数名 = 初期値;
 var 変数名 = 初期値;
 ```
+
 変数定義時に`const` `let` `var`を付けなかった場合は、グローバル変数として定義されます。ただし、グローバル変数は、スコープが分かりにくくなる可能性が高くなるほか、既存の値を上書きする可能性が高くなります。必ず変数定義を忘れずに行いましょう。
 
 ```javascript:NG例
@@ -121,8 +122,6 @@ console.log(number);
 
 `var`は、`const`か`let`で置き換えて定義しよう！
 
-
-
 ### 定数 `const`
 定数はコンスタントケース(CONSTANT_CASE)で定義します。
 https://cou929.nu/data/google_javascript_style_guide/
@@ -145,6 +144,11 @@ const object = {
 object.key = "新しい値";
 -> 値を上書きできるため、定数と呼べない
 ```
+
+## まとめ
+変数宣言をしないとJavaScriptはグローバル変数として認識してしまします。
+('use strict'を利用している場合はエラーが返る)
+繰り返し利用する値は、必ず変数宣言をしてデータを扱いましょう。
 
 # 🧑‍💻 チェックポイント
 - [x] const, let, varの違いが分かった
