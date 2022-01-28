@@ -119,6 +119,10 @@ console.log(number);
 
 `var`は、`const`か`let`で置き換えて定義しよう！
 
+:::details 💡 const / let の変数宣言を使う理由を動画でチェック
+@[youtube](Km19WhJaBYg)
+:::
+
 ### 定数 `const`
 定数はコンスタントケース(CONSTANT_CASE)で定義します。
 https://cou929.nu/data/google_javascript_style_guide/

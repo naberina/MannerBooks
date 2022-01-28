@@ -1,7 +1,7 @@
 ---
 title: "🔰 Strictモード('use strict')"
 ---
-# 'use strict'を書く理由を理解しておこう！
+# `use strict`を書く理由を理解しておこう！
 ![](https://storage.googleapis.com/zenn-user-upload/6a2add633a7801c2d07aa059.png =400x)
 
 ## はじめに
@@ -29,7 +29,7 @@ Strictモードを **①利用しなかった場合**と、
 **②利用した場合**にどのような違いがあるのか確認してみましょう。
 
 ### ①`'use strict'` を利用していない場合
-![](https://storage.googleapis.com/zenn-user-upload/8616a43f7c2d3ef28cebf44a.png)
+![](https://storage.googleapis.com/zenn-user-upload/8616a43f7c2d3ef28cebf44a.png =400x)
 
 変数宣言(let, const, var)をしていない `text_a` は、グローバル変数として処理され`console.log(text_a);`が実行されます。
 
@@ -40,13 +40,13 @@ Strictモードを **①利用しなかった場合**と、
 ※「なぜグローバル変数がいけないの？と」思った方は [グローバル変数を乱用しない](https://kenju.gitbooks.io/js_step-up-to-intermediate/content/content/part01/avoid_abusing_global_variables.html) や『🔰 変数』Chapterを一読してみてください。
 
 ### ②`'use strict'` を利用した場合
-![](https://storage.googleapis.com/zenn-user-upload/dbda84b8378ce0a20f41aaf2.png)
+![](https://storage.googleapis.com/zenn-user-upload/dbda84b8378ce0a20f41aaf2.png =400x)
 
 `ReferenceError: text_b is not defined`
 参照エラー: text_bが変数定義されていないため、エラーが返ります。
 
 `let`を利用して、変数を定義してから実行してみましょう。
-![](https://storage.googleapis.com/zenn-user-upload/b80dfa2b7399ab3dc5576595.png)
+![](https://storage.googleapis.com/zenn-user-upload/b80dfa2b7399ab3dc5576595.png =400x)
 正しく、実行することができました。
 
 このように`'use strict'`を利用すると開発途中で、
@@ -192,6 +192,11 @@ Uncaught TypeError: Cannot create property 'you' on string 'with'
 - Strictモードは、全てのブラウザでサポートされていない
 - ブラウザのバージョンによっても異なる
 	- https://caniuse.com/?search=use%20strict
+
+## 動画でチェックする
+:::details kintone Tech Channel(キンテク)を見る
+@[youtube](oGda4TNdHwg)
+:::
 
 ## まとめ
 `use strict` はエラー該当箇所を事前に確認することができ、セキュアなコーディングができるため記載しましょう。
