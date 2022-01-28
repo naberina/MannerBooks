@@ -46,7 +46,7 @@ title: "🍵 コメントアウト"
 ```javascript
 let putParams = {
   app: event.appId,
-  id: event.record.$id.value, // ◯ $id指定(変更不可), △event.record.レコード番号(後から値を変更できてしまう)
+  id: event.record.$id.value, // ◯ event.record.$id(変更不可)を採用する, △ event.record.レコード番号(後から値が変わってしまう恐れがある)
 };
 ```
 :::
@@ -62,19 +62,36 @@ let getParams = {
 ```
 :::
 
+また、**アノテーションコメント**も有用です。
+:::message
+**アノテーションコメント**とは？
+コメントに情報にアノテーション(annotation: 注釈)をつけたものです。
+つまり、コメントにさらにデータを持っているコメントのことです。
+:::
+
 :::details TODO: あとで手を付ける
+```javascript
+let getParams = {
+    app: 1, //TODO: サンプルidのため後で変更すること
+    id: event.record.顧客管理番号.value
+  };
+```
 :::
 
 :::details FIXME: 既知の不具合があるコード
+```javascript
+function sampleFixme(params1, params2){
+  // FIXME: 例外処理を実装すること
+  return 200;
+}
+```
 :::
 
-:::details HACK: あまりきれいじゃない解決策
-:::
+コメントの前にTODOやFIXMEといったようなデータを持たせておくことで、コメントの理由が明確になりますし、後から修正したい箇所が検索しやすくなりますね！
 
-:::details XXX: 危険、大きな問題がある
-:::
-
-
+他のアノテーションコメントを知りたい方は、次の記事もご確認ください。
+[TODO: 以外のアノテーションコメントをまとめた](https://qiita.com/taka-kawa/items/673716d77795c937d422)
+[TODO以外のアノテーションコメントまとめ](https://www.taperium.com/wordpress/tech/15285.html)
 ### チェックポイント
 - [x] コメントアウトの書き方が分かった
 - [x] どのようなコメントが役に立つか分かった
