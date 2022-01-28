@@ -140,6 +140,7 @@ VM47:3 Uncaught TypeError: Cannot delete property 'prototype' of function Object
     at <anonymous>:3:3
     at <anonymous>:4:3
 ```
+:::
 
 :::details 4.関数の引数名が一意であることを必須
 ```js: consoleで実行
