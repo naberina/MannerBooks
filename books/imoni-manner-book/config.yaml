@@ -1,4 +1,4 @@
-title: "御作法Books"
+title: "御作法Book"
 summary: "kintoneカスタマイズをする際の、押さえておきたい御作法・コーディングルール。"
 topics: ["kintone", "コーディングルール"] # トピック（5つまで）
 published: false # falseだと下書き
@@ -13,5 +13,7 @@ chapters:
   - 3-1_imoni-manner-book
   - 3-2_imoni-manner-book
   - 3-3_imoni-manner-book
+  # - 3-4_imoni-manner-book
   - 3-5_imoni-manner-book
+  # - 3-6_imoni-manner-book
   # - 4-1_imoni-manner-book
