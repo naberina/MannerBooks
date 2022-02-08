@@ -22,7 +22,7 @@ title: "🔰 予約語"
 
 よく見ると、変数定義で使用している`var` `const`や、
 条件分岐で使用する`if ~ else`などが予約語となっています。
-[ECMAScript 2015 における予約キーワード](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)
+Ref. [ECMAScript 2015 における予約キーワード](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)
 
 試しに、予約語になっているワードで変数を定義して、コードを実行してみましょう。
 
