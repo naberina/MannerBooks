@@ -22,16 +22,21 @@ title: "🔰 予約語"
 
 よく見ると、変数定義で使用している`var` `const`や、
 条件分岐で使用する`if ~ else`などが予約語となっています。
-[ECMAScript 2015 における予約キーワード](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)
+Ref. [ECMAScript 2015 における予約キーワード](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)
 
 試しに、予約語になっているワードで変数を定義して、コードを実行してみましょう。
 
 ```js:予約語を使用した宣言(NG例)
+// *********** //
 // 変数名の場合
+// *********** //
 let delete = "削除";
+console.log(delete);
 // -> Uncaught SyntaxError: Unexpected token 'delete'
 
+// *********** //
 // 関数名の場合
+// *********** //
 function delete(){
     console.log('予約語をつかった関数名');
 }
@@ -41,7 +46,7 @@ delete();
 
 結果は、`SyntaxError(構文エラー)`となります。
 つまり、予約語は変数・関数名に定義できない仕様になっています。
-ただし、予約語は単体では利用できませんが、単語を組み合わせて利用することは可能です。
+ただし、単語を組み合わせて利用することは可能です。
 
 例えば、削除の意味を持たせたい場合は、
 `〇〇_delete`や`destroy〇〇` といったワードを利用できます。
