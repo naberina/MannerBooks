@@ -64,10 +64,8 @@ kintone.api(kintone.api.url('/k/v1/record.json', true), 'GET', body, function(re
 ![](https://storage.googleapis.com/zenn-user-upload/d59b0cf8cc37580a04e2baef.gif)
 
 # まとめ
-- コーディングする際はインデントを必ず整えよう
-  - コードの可読性を高めるため
-
-# 🧑‍💻 チェックポイント
+- コーディングする際は、コードの可読性を高めるためインデントを必ず整えよう
+# チェックポイント
 - [x] インデントの重要性が分かった
 - [x] 使用しているエディタに自動インデント修正機能が存在するか確認できた
 - [x] 現在カスタマイズしているコードが正しくインデントできた

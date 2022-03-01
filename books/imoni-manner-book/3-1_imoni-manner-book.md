@@ -57,7 +57,7 @@ Strictモードを **①利用しなかった場合**と、
 スコープ(scope)は、「範囲、視野、余地」といった意味を持つ単語です。
 つまり、ここではStrictモードを適用する範囲をみていきます。
 
-Strictモードは、スクリプト全体に適用するか、一部に適用するか範囲を変えることができます。では、適用方法を確認していきましょう。
+Strictモードは、**スクリプト全体に適用するか、一部に適用するか**範囲を変えることができます。では、適用方法を確認していきましょう。
 
 ```js:全体にStrictモード
 ((){
@@ -109,9 +109,10 @@ Strictモードの厳格なチェック内容を見てみましょう。
   mistypeVariable = 17;
 })();
 
-Uncaught ReferenceError: mistypeVariable is not defined
-    at <anonymous>:3:19
-    at <anonymous>:4:3
+// ↓エラーメッセージ↓
+// Uncaught ReferenceError: mistypeVariable is not defined
+//   at <anonymous>:3:19
+//   at <anonymous>:4:3
 ```
 :::
 
@@ -123,26 +124,28 @@ Uncaught ReferenceError: mistypeVariable is not defined
   undefined = 5; // TypeError(例外処理) を投げます
 })();
 
-VM290:4 Uncaught TypeError: Cannot assign to read only property 'undefined' of object '#<Window>'
-    at <anonymous>:4:13
-    at <anonymous>:5:3
+// ↓エラーメッセージ↓
+// VM290:4 Uncaught TypeError: Cannot assign to read only property 'undefined' of object '#<Window>'
+//  at <anonymous>:4:13
+//  at <anonymous>:5:3
 ```
 :::
 
-:::details 3.削除できないプロパティの削除操作に対してエラー
+:::details 3.削除できないプロパティの削除操作に対してエラーを返す
 ```js: consoleで実行
 (() => {
   'use strict';
   delete Object.prototype; // TypeError(例外処理) を投げます
 })();
 
-VM47:3 Uncaught TypeError: Cannot delete property 'prototype' of function Object() { [native code] }
-    at <anonymous>:3:3
-    at <anonymous>:4:3
+// ↓エラーメッセージ↓
+// VM47:3 Uncaught TypeError: Cannot delete property 'prototype' of function Object() { [native code] }
+//  at <anonymous>:3:3
+//  at <anonymous>:4:3
 ```
 :::
 
-:::details 4.関数の引数名が一意であることを必須
+:::details 4.関数の引数名が一意であることを必須とする
 ```js: consoleで実行
 (() => {
   'use strict';
@@ -152,20 +155,15 @@ VM47:3 Uncaught TypeError: Cannot delete property 'prototype' of function Object
   }
 })();
 
-Uncaught SyntaxError: Duplicate parameter name not allowed in this context
+// ↓エラーメッセージ↓
+// Uncaught SyntaxError: Duplicate parameter name not allowed in this context
 ```
 :::
 
-:::details 5.プリミティブ値にプロパティを設定することが禁止
+:::details 5.プリミティブ値にプロパティを設定することを禁止する
 
 プリミティブ値 = メソッドを持たないデータのこと。
 イミュータブル(immutable) = 変更できない値のこと。
-
-(例)
-`'テスト'.length`
--> 3
-`primitiveValue.length`
--> 不可能
 
 ```js: consoleで実行
 (() => {
@@ -175,10 +173,10 @@ Uncaught SyntaxError: Duplicate parameter name not allowed in this context
   'with'.you = 'far away'; // TypeError
 })();
 
-Uncaught TypeError: Cannot create property 'true' on boolean 'false'
-Uncaught TypeError: Cannot create property 'sailing' on number '14'
-Uncaught TypeError: Cannot create property 'you' on string 'with'
-
+// ↓エラーメッセージ↓
+// Uncaught TypeError: Cannot create property 'true' on boolean 'false'
+// Uncaught TypeError: Cannot create property 'sailing' on number '14'
+// Uncaught TypeError: Cannot create property 'you' on string 'with'
 ```
 
 :::
@@ -186,14 +184,14 @@ Uncaught TypeError: Cannot create property 'you' on string 'with'
 ## メリット
 - エラーになる一部を教えてくれる
 - プログラムを高速に実行できる
-- セキュアなJavaScriptコード記述
+- セキュアなJavaScriptコードを記述できる
 
 ## 注意点
-- Strictモードは、全てのブラウザでサポートされていない
-- ブラウザのバージョンによっても異なる
+- 全てのブラウザでサポートされていない
+- ブラウザのバージョンによってもサポートが異なる
 	- https://caniuse.com/?search=use%20strict
 
-## 動画でチェックする
+## 動画で'use strict'を学ぶ
 :::details kintone Tech Channel(キンテク)を見る
 @[youtube](oGda4TNdHwg)
 :::
