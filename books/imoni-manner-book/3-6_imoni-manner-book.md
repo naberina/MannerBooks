@@ -43,4 +43,4 @@ const increment = function(n) {
 
 console.log(increment(10));
 // -> 11
-``` -->
+```
