@@ -18,7 +18,7 @@ title: "📚 更新履歴"
    1. Strictモード(`use strict`)
    2. データ型
    3. 変数・定数
-   4. **★関数**
+   4. [**★関数**](https://zenn.dev/naberina/books/imoni-manner-book/viewer/3-4_imoni-manner-book)
    5. 予約語
 :::
 
